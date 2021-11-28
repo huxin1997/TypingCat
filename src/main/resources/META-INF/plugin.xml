@@ -1,0 +1,49 @@
+<idea-plugin>
+    <id>com.typingCat</id>
+    <name>TypingCat</name>
+    <vendor email="abstract123@foxmail.com">JavaCat</vendor>
+    <description><![CDATA[
+        <h3>TypingCat is an English words spelling prompt and completion plugin. </h3>
+        <p><strong>Features</strong></p>
+        <ul>
+            <li>Contains 10K commonly used words.</li>
+            <li>Support for code naming: local variables, constants, method names, method parameters, class names. </li>
+            <li>Support fuzzy search.</li>
+            <li>Based on code completion, Use the shortcut key &quot;Ctrl + space&quot;</li>
+            <li>Offline mode, faster response</li>
+        </ul>
+        <h3>TypingCat 是一个英语单词拼写提示与补全插件</h3>
+        <p><strong>特性</strong></p>
+        <ul>
+            <li>包含1万个常用单词</li>
+            <li>支持应用于代码命名：局部变量、常量、方法名、方法参数、类名</li>
+            <li>支持模糊搜索</li>
+            <li>基于代码补全，使用快捷键 &quot;Ctrl + space&quot;</li>
+            <li>离线模式，响应更快</li>
+        </ul>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends optional="true" config-file="17950-java.xml">com.intellij.modules.java</depends>
+    <depends optional="true" config-file="17950-go.xml">org.jetbrains.plugins.go</depends>
+    <depends optional="true" config-file="17950-python.xml">com.intellij.modules.python</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!--    <codeInsight.template.postfixTemplateProvider></codeInsight.template.postfixTemplateProvider>-->
+        <applicationService serviceImplementation="com.typingcat.service.WordManageService"/>
+    </extensions>
+
+        <actions>
+    <!--         Add your actions here-->
+            <action id="T.A" class="com.typingcat.component.Dialog" text="提示功能" description="typingCat">
+                <add-to-group group-id="EditMenu" anchor="first"/>
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl 5"/>
+            </action>
+<!--            <action id="completion" class="com.typingcat.component.MyAction" text="MyCompletion" description="MyCompletion">-->
+<!--                <add-to-group group-id="CodeCompletionGroup" anchor="first"/>-->
+<!--            </action>-->
+        </actions>
+</idea-plugin>
