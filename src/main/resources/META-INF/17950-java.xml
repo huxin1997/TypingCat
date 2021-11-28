@@ -1,0 +1,7 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <completion.contributor language="JAVA"
+                                order="first"
+                                implementationClass="com.typingcat.completion.contributor.JavaWordCompletionContributor"/>
+    </extensions>
+</idea-plugin>

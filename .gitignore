@@ -1,0 +1,8 @@
+.idea/*
+!.idea/icon.svg
+!.idea/runConfigurations/
+.gradle/
+build/
+out/
+.DS_Store
+*.iml

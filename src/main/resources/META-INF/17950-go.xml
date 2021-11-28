@@ -1,0 +1,7 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <completion.contributor language="go"
+                                order="first"
+                                implementationClass="com.typingcat.completion.contributor.GoWordCompletionContributor"/>
+    </extensions>
+</idea-plugin>
