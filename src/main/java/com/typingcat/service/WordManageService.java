@@ -28,14 +28,6 @@ public final class WordManageService {
     }
 
     private void loadDictionary() {
-//        ProgressManager.getInstance().run(new Task.Backgroundable(myProject, "TypingCat") {
-//            @Override
-//            public void run(@NotNull ProgressIndicator indicator) {
-//                indicator.setText("正在加载词典");
-//                indicator.setFraction(0.5);
-////                indicator.setIndeterminate(true);
-//            }
-//        });
         loadFile("/dictionary/simple.txt");
         loadFile("/dictionary/java.txt");
         loadFile("/dictionary/gre.txt");
@@ -51,7 +43,7 @@ public final class WordManageService {
 
     private void loadFile(String path) {
         try {
-            String line = null;
+            String line;
             BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(path), StandardCharsets.UTF_8));
 
             while ((line = br.readLine()) != null) {
