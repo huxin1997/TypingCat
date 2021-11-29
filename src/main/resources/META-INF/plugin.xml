@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>com.typingCat</id>
+    <id>com.java256.typingCat</id>
     <name>TypingCat</name>
-    <vendor email="abstract123@foxmail.com">JavaCat</vendor>
+    <vendor email="abstract123@foxmail.com" >JavaCat</vendor>
     <description><![CDATA[
         <h3>TypingCat is an English words spelling prompt and completion plugin. </h3>
         <p><strong>Features</strong></p>
@@ -20,6 +20,7 @@
             <li>支持模糊搜索</li>
             <li>基于代码补全，使用快捷键 &quot;Ctrl + space&quot;</li>
             <li>离线模式，响应更快</li>
+            <li>兼容Idea、AndroidStudio、Goland、PyCharm</li>
         </ul>
     ]]></description>
 
@@ -38,12 +39,7 @@
 
         <actions>
     <!--         Add your actions here-->
-            <action id="T.A" class="com.typingcat.component.Dialog" text="提示功能" description="typingCat">
-                <add-to-group group-id="EditMenu" anchor="first"/>
-                <keyboard-shortcut keymap="$default" first-keystroke="ctrl 5"/>
-            </action>
-<!--            <action id="completion" class="com.typingcat.component.MyAction" text="MyCompletion" description="MyCompletion">-->
-<!--                <add-to-group group-id="CodeCompletionGroup" anchor="first"/>-->
-<!--            </action>-->
+
+
         </actions>
 </idea-plugin>

@@ -1,19 +1,21 @@
 package com.typingcat.completion.provider;
 
-import com.intellij.codeInsight.completion.*;
+import com.intellij.codeInsight.completion.CompletionParameters;
+import com.intellij.codeInsight.completion.CompletionProvider;
+import com.intellij.codeInsight.completion.CompletionResultSet;
+import com.intellij.codeInsight.completion.PlainPrefixMatcher;
+import com.intellij.codeInsight.completion.PrefixMatcher;
 import com.intellij.codeInsight.completion.impl.BetterPrefixMatcher;
 import com.intellij.codeInsight.completion.impl.CamelHumpMatcher;
 import com.intellij.codeInsight.lookup.LookupElementBuilder;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.psi.PsiElement;
 import com.intellij.psi.codeStyle.NameUtil;
 import com.intellij.util.ProcessingContext;
 import com.typingcat.completion.trie.Node;
 import com.typingcat.service.WordManageService;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.List;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * @author huxin
@@ -30,8 +32,6 @@ public class DefaultCompletionProvider extends CompletionProvider<CompletionPara
     @Override
     protected void addCompletions(@NotNull CompletionParameters parameters, @NotNull ProcessingContext context,
                                   @NotNull CompletionResultSet result) {
-        PsiElement psiElement = parameters.getPosition();
-        System.out.println(psiElement.getText());
         PrefixMatcher prefixMatcher = result.getPrefixMatcher();
 
         String prefix = prefixMatcher.getPrefix();
@@ -52,17 +52,11 @@ public class DefaultCompletionProvider extends CompletionProvider<CompletionPara
                     .withPresentableText(node.word)
                     .withIcon(AllIcons.Actions.WordsSelected)
                     .withBoldness(false)
-//                    .withTailText("v.", true)
                     .withTypeText(node.explain)
                     .bold();
-                NameUtil.MatcherBuilder matcherBuilder = NameUtil.buildMatcher(prefix);
                 CamelHumpMatcher.applyMiddleMatching(prefix);
-//                prefixMatcher.
-//                CompletionResult completionResult = CompletionResult.wrap(element, prefixMatcher, CompletionSorter.emptySorter());
-//                CompletionResultSet completionResultSet =
                 CompletionResultSet completionResultSet =
                     result.withPrefixMatcher(new BetterPrefixMatcher(new PlainPrefixMatcher(prefix, false), 0));
-//                completionResultSet.addElement(element);
                 completionResultSet.addElement(element);
             }
         }
