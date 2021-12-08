@@ -23,6 +23,10 @@ public class MyPrefixMatcher extends PrefixMatcher {
         return matcher.isStartMatch(name);
     }
 
+    @Override
+    public int matchingDegree(String string) {
+        return string.startsWith(getPrefix()) ? 1 : 0;
+    }
 
     @Override
     public @NotNull
