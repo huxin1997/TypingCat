@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.java256.typingCat'
-version '0.0.6'
+version '0.0.8'
 
 repositories {
     maven {
@@ -35,6 +35,15 @@ patchPluginXml {
     sinceBuild = "203"
     untilBuild = ""
     changeNotes = """
+<h3>0.0.8</h3>
+<ul>
+<li>优化提示列表排序</li>
+</ul>
+<h3>0.0.7</h3>
+<ul>
+<li>支持命名后缀为"_"时补全</li>
+<li>增加拼写容错性</li>
+</ul>
 <h3>0.0.6</h3>
 <ul>
 <li>新增对Python语言的支持</li>

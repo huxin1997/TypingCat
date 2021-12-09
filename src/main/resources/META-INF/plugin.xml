@@ -22,6 +22,7 @@
             <li>离线模式，响应更快</li>
             <li>兼容Idea、AndroidStudio、Goland、PyCharm</li>
         </ul>
+        <p><a target="_blank" href="https://github.com/huxin1997/TypingCat">GitHub</a></p>
     ]]></description>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
