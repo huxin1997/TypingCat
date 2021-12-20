@@ -27,6 +27,7 @@ public class DefaultCompletionProvider extends CompletionProvider<CompletionPara
     private final WordManageService wordManageService;
 
     private final InsertHandler<LookupElement> insertHandler = new DefaultInsertHandler();
+    private final int RESULT_LIMIT = 20;
 
     public DefaultCompletionProvider(WordManageService wordManageService) {
         this.wordManageService = wordManageService;
@@ -40,8 +41,8 @@ public class DefaultCompletionProvider extends CompletionProvider<CompletionPara
         if (NameUtils.isCompositeName(prefix)) {
             prefix = NameUtils.getLastWord(prefix).toLowerCase(Locale.ROOT);
         }
-        List<Node> list = Node.searchPrefix(wordManageService.getWordsTree(), prefix);
-
+        List<Node> list = Node.searchPrefix(wordManageService.getWordsTree(), prefix, RESULT_LIMIT);
+        result.restartCompletionOnAnyPrefixChange();
         if (list.isEmpty()) {
             result.restartCompletionOnAnyPrefixChange();
             return;
