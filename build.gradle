@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.java256.typingCat'
-version '0.0.8'
+version '0.0.9'
 
 repositories {
     maven {
@@ -16,6 +16,11 @@ repositories {
     mavenCentral()
 }
 
+buildPlugin {
+    buildSearchableOptions{
+        enabled = false
+    }
+}
 publishPlugin {
     channels = ['Stable']
     token = System.getenv("ORG_GRADLE_PROJECT_intellijPublishToken")
@@ -35,6 +40,10 @@ patchPluginXml {
     sinceBuild = "203"
     untilBuild = ""
     changeNotes = """
+<h3>0.0.9</h3>
+<ul>
+<li>修复了不自动提示bug</li>
+</ul>
 <h3>0.0.8</h3>
 <ul>
 <li>优化提示列表排序</li>

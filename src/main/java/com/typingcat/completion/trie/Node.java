@@ -1,8 +1,5 @@
 package com.typingcat.completion.trie;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -17,7 +14,7 @@ public class Node {
     public static int counter = 0;
 
 
-    public static List<Node> searchPrefix(Node root, String words) {
+    public static List<Node> searchPrefix(Node root, String words, int resultLimit) {
 
         char[] chars = words.toCharArray();
         StringBuilder sb = new StringBuilder();
@@ -37,7 +34,10 @@ public class Node {
             for (int i = 0; i < root.slot.length; i++) {
                 if (root.slot[i] != null) {
                     char c = (char) (i + 'a');
-                    collect(root.slot[i], new StringBuilder(sb).append(c).toString(), result);
+                    collect(root.slot[i], new StringBuilder(sb).append(c).toString(), result, resultLimit);
+                    if (result.size() >= resultLimit) {
+                        return result;
+                    }
                 }
 
             }
@@ -48,7 +48,7 @@ public class Node {
     }
 
 
-    public static void collect(Node node, String pre, List<Node> queue) {
+    public static void collect(Node node, String pre, List<Node> queue, int resultLimit) {
         if (node == null) {
             return;
         }
@@ -56,12 +56,15 @@ public class Node {
         if (node.count > 0) {
             node.word = pre;
             queue.add(node);
+            if (queue.size() >= resultLimit) {
+                return;
+            }
         }
 
         for (int i = 0; i < node.slot.length; i++) {
             char c = (char) ('a' + i);
             if (node.slot[i] != null) {
-                collect(node.slot[i], pre + c, queue);
+                collect(node.slot[i], pre + c, queue, resultLimit);
             }
 
         }
