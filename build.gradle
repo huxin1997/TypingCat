@@ -34,7 +34,7 @@ dependencies {
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
     version = '2020.3.4'
-    plugins = ['com.intellij.java','Pythonid:203.5981.155','org.jetbrains.plugins.go:203.5981.155']
+    plugins = ['org.jetbrains.kotlin','com.intellij.java','Pythonid:203.5981.155','org.jetbrains.plugins.go:203.5981.155']
 }
 patchPluginXml {
     sinceBuild = "203"

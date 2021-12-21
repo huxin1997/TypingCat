@@ -1,0 +1,7 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <completion.contributor language="kotlin"
+                                order="first,before KotlinCompletionContributor"
+                                implementationClass="com.typingcat.completion.contributor.KotlinWordCompletionContributor"/>
+    </extensions>
+</idea-plugin>

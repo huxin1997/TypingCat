@@ -32,6 +32,7 @@
     <depends optional="true" config-file="17950-java.xml">com.intellij.modules.java</depends>
     <depends optional="true" config-file="17950-go.xml">org.jetbrains.plugins.go</depends>
     <depends optional="true" config-file="17950-python.xml">com.intellij.modules.python</depends>
+    <depends optional="true" config-file="17950-kotlin.xml">org.jetbrains.kotlin</depends>
 
     <extensions defaultExtensionNs="com.intellij">
         <!--    <codeInsight.template.postfixTemplateProvider></codeInsight.template.postfixTemplateProvider>-->
