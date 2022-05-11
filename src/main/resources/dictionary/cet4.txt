@@ -201,7 +201,7 @@ asynchronous#异步的
 attach#附加; 选用
 attached#adj. 附加的 (过去分词)喜欢; 依恋于
 attachment#n. 附属物; 连接物; 附件; 爱慕
-attack#增高
+attack#v. 攻击; 进攻; 打; 增高
 attention#n. 注意; 留心; 注意力; 立正
 attenuation#衰减
 attenuator#衰减器

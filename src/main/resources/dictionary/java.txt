@@ -1,41 +1,31 @@
-public#adj.平民的, 大众的, 公众的, 百姓的; 公共的, 公用的; 公开的；政府的；公立的
+public#adj.公开的; 公共的; 平民的, 大众的, 公众的, 百姓的; 公用的; 政府的；公立的
 static#adj.静止的，静态的；不变化的
-void#adj.无效的；缺乏…的，没有…的；空的，空空如也
+void#adj.空; 无效的；缺乏…的，没有…的；空空如也
 main#adj.主要的, 最重要的
-class#n.班级,课, 上课, 班级(等)阶级,种类
+class#n.类, 班级,课, 班级(等)阶级
 system#n.系统, 体系, 制度, 体制
 out#adv.出去, 外出, 离开, 出于
 print#v.打印, 印刷, 发表, 刊登
 eclipse#n.日食，月食；丧失；黯然失色
-string#n.绳, 线; (一)串; 一连串; 弦; 字符串; 附带条件
-public#adj.平民的, 大众的, 公众的, 百姓的; 公共的, 公用的; 公开的；政府的；公立的
-static#adj.静止的，静态的；不变化的
-void#adj.无效的；缺乏…的，没有…的；空的，空空如也
-main#adj.主要的, 最重要的
-class#n.班级,课, 上课, 班级(等)阶级,种类
-system#n.系统, 体系, 制度, 体制
-out#adv.出去, 外出, 离开, 出于
-print#v.打印, 印刷, 发表, 刊登
-eclipse#n.日食，月食；丧失；黯然失色
-string#n.绳, 线; (一)串; 一连串; 弦; 字符串; 附带条件
-double#adj.两倍的, 加倍的, 双的, 成双的
-int#n.【计】国际性组织
-char#v.把…烧成炭, 烧焦(木材表面), 变焦黑, 〔化〕碳化
+string#n.字符串; 绳, 线; (一)串; 一连串; 弦; 附带条件
+double#computer. 双精度浮点数字型, adj.两倍的, 加倍的, 双的, 成双的
+int#computer. 整数数字型, n. 整数
+char#n. 字符 v.把…烧成炭, 烧焦(木材表面), 变焦黑, 〔化〕碳化
 scanner#n.扫描仪, 扫描器, 扫描设备, （医用）扫描器
 integer#n.整数
 type#n.类型, 种类, 字体, 典型
-true#adj.符合事实的, 确实的, 如实的, 真正的（而非表面上的）
-false#adj.错误的, 不正确的, 不真实的, 非天生的；虚伪的，假的
+true#computer. 逻辑真, adj.符合事实的, 确实的, 如实的, 真正的（而非表面上的）
+false#computer. 逻辑假, adj.错误的, 不正确的, 不真实的, 非天生的；虚伪的，假的
 if#conj.如果, 当, 倘若, 假若
 else#adv.另外，其他
-simple#adj.笨, 易于理解的, 易做的, 简单的
+simple#adj. 简单的, 易于理解的, 易做的, 笨
 case#n.事例, 情况, 盒子, 箱子, 案件, 病例
-default#v.违约; 不履行义务; 默认, 预设
+default#v.默认, 预设; 违约; 不履行义务; 
 switch#v.调换, 交换; 调动, 调任; 改变, 转变; 用开关把…开启(或关掉)
 break#v.稍停,暂停,中断, 破坏, 弄破, 碎, 打断, 背弃
-match#n.火柴；对手；比赛, 竞赛；婚姻；相配的人（或物）
+match#n.匹配；火柴；对手；比赛, 竞赛；婚姻
 assess#v.评价, 评定; 估价, 估计
-exception#n.例外
+exception#n.异常；例外
 equal#adj.（大小、数量、价值等）相同的, 相等的, 平等的, 同等的
 while#n.一会儿, 一段时间
 index#n.索引；指数
@@ -115,26 +105,27 @@ music#n.音乐, 乐曲, 乐曲创作（或演奏）艺术, 乐谱
 computer#n.计算机, 计算器, 计算者
 student#n.学生, 大学生, 研究生, 学者
 text#n.文本, 教科书, 文档, 剧本
-test#n.试验, 检测, 考试, 测验
-max#n.马克斯, 最大值, 极大值
+test#n.测试, 试验, 检测, 考试
+max#n.最大值, 极大值, 马克斯
 Min#abbr.(=minute)分, 分钟, (=minimum)最小, 最少
 avg#adj.根据海损法进行估价的
 add#v.添加, 增加, 补充说, 继续说
 minus#prep.减去
 multiply#v.乘；增加；繁殖
 divide#v.划分；分隔；除，除以
-mon#n.man 的变体, 孟族人, 孟族语
+mon#n.星期一(=Monday)
 tue#n.星期二(=Tuesday)
-wed#v.结婚, 娶, 嫁
+wed#n.星期三(=Wednesday)
 thu#n.星期四(=Thursday)
 Friday#n.礼拜五, 【文】星期五
 Saturday#n.礼拜六
 Sunday#n.礼拜日
-jan#n.【女名】女子名, 【男名】男子名
+jan#n.一月(=January)
 feb#n.二月(=February)
-mar#v.破坏, 毁坏, 损毁, 损害
-may#modalv.可能, （转折前所述情况属实）也许, （征求同意或表示允许）可以
+mar#n.三月(=March)
+apr#n.四月(=April)
+may#v.可能, n.五月(=May)
 June#n.六月
 July#n.七月
 Aug#n.八月
-sept#n.氏族, (爱尔兰或苏格兰)氏族
+sept#n.九月(=Septembern)
