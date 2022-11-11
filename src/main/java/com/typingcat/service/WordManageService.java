@@ -1,6 +1,7 @@
 package com.typingcat.service;
 
 import com.intellij.openapi.components.Service;
+import com.typingcat.completion.settings.AppSettingsState;
 import com.typingcat.completion.trie.Node;
 
 import java.io.BufferedReader;
@@ -42,6 +43,7 @@ public final class WordManageService {
 
 
     private void loadFile(String path) {
+        boolean showMeaning = AppSettingsState.getInstance().showMeaning;
         try {
             String line;
             BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(path), StandardCharsets.UTF_8));
@@ -53,7 +55,7 @@ public final class WordManageService {
                     continue;
                 }
                 simplifyExplanations(wordInfo);
-                Node.insert(wordsTree, wordInfo[0].toLowerCase().trim(), wordInfo.length == 2 ? wordInfo[1] : "");
+                Node.insert(wordsTree, wordInfo[0].toLowerCase().trim(), wordInfo.length == 2 && showMeaning ? wordInfo[1] : "");
             }
             br.close();
         } catch (IOException e) {
