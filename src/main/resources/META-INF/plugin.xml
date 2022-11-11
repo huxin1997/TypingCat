@@ -36,11 +36,12 @@
     <extensions defaultExtensionNs="com.intellij">
         <!--    <codeInsight.template.postfixTemplateProvider></codeInsight.template.postfixTemplateProvider>-->
         <applicationService serviceImplementation="com.typingcat.service.WordManageService"/>
+        <applicationService serviceImplementation="com.typingcat.completion.settings.AppSettingsState"/>
+        <applicationConfigurable
+                parentId="tools"
+                instance="com.typingcat.completion.settings.AppSettingsConfigurable"
+                id="com.typingcat.completion.settings.AppSettingsConfigurable"
+                displayName="TypingCat"/>
     </extensions>
 
-        <actions>
-    <!--         Add your actions here-->
-
-
-        </actions>
 </idea-plugin>
